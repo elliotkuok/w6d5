@@ -2,7 +2,7 @@
 
 <form action="<%= cats_url %>" method="POST">
   <label for="name">Name</label>
-  <input id="name" type="text" name="cat[name]" value="<%= @cat[name] %>"/>
+  <input id="name" type="text" name="cat[name]" value="<%= @cat.name %>"/>
   <br>
   <label for="sex">Select sex</label>
   <input id="sex" type="radio" name="cat[sex]" value="M"/>Male <br>
@@ -17,10 +17,10 @@
  </select>
   <br>
   <label for="birthdate">Select a birth date</label>
-  <input id="birthdate" type="date" name="cat[birth_date]" value="<%= @cat[birth_date] %>"/>
+  <input id="birthdate" type="date" name="cat[birth_date]" value="<%= @cat.birth_date %>"/>
   <br>
   <label for="description">Describe your cat</label>
-  <textarea id="description" name="cat[description]" rows='5'><%= @cat[description] %></textarea>
+  <textarea id="description" name="cat[description]" rows='5'><%= @cat.description %></textarea>
   <br>
   <input type="submit" value="Create" />
   <!-- <button>Create</button> -->

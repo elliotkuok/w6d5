@@ -1,6 +1,4 @@
-<h2><%= peach.username %></h2>
-<ul>
-  <li>Email: <%= peach.email %></li>
-  <li>Age: <%= peach.age %></li>
-  <li>Coding Preference: <%= peach.coding_pref %></li>
-</ul>
+<h1>Cats Index</h1>
+<% @cats.each do |cat| %>
+  <%= render 'page', cat: cat, action: :index %>
+<% end %>

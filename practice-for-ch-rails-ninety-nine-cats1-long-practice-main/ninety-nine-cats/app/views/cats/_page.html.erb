@@ -1,0 +1,12 @@
+<h2><a href="<%= cat_url(cat.id) %>"><%= cat.name %></a></h2>
+<ul>
+  <li>Color: <%= cat.color %></li>
+  <li>Birth Date: <%= cat.birth_date %></li>
+  <li>Sex: <%= cat.sex %></li>
+</ul>
+
+<% if action == :show %>
+  <a href="<%= cats_url %>">Back To Index</a>
+<% elsif action == :index %>
+  <a href="<%= cat_url(cat.id) %>">Go To Show Page</a>
+<% end %>
